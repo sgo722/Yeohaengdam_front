@@ -9,7 +9,7 @@ export const useBoardStore = defineStore('board', () => {
 
   const getList = () => {
     axios
-      .get('http://localhost:8080/api/articles/list')
+      .get('https://apiyeohaengdam.ttalkak.com/api/articles/list')
       .then((response) => {
         console.log(response);
         boardList.value = response.data;
@@ -20,7 +20,7 @@ export const useBoardStore = defineStore('board', () => {
   };
 
   const deleteArticle = async (articleNo) => {
-    await axios.get(`http://localhost:8080/api/articles/delete`, {
+    await axios.get(`https://apiyeohaengdam.ttalkak.com/api/articles/delete`, {
       params: { articleNo },
     });
     console.log('finish delete');
@@ -29,7 +29,7 @@ export const useBoardStore = defineStore('board', () => {
 
   const modifyArticle = async (board) => {
     const updatedArticle = await axios.get(
-      `http://localhost:8080/api/articles/update`,
+      `https://apiyeohaengdam.ttalkak.com/api/articles/update`,
       { params: { board } }
     );
     console.log('finish update');

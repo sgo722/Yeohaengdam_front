@@ -42,7 +42,7 @@ const handleUpdate = async () => {
     const token = sessionStorage.getItem('accessToken');
 
     const response = await axios.put(
-      'http://localhost:8080/api/users/update_password',
+      'https://apiyeohaengdam.ttalkak.com/api/users/update_password',
       user,
       {
         headers: {

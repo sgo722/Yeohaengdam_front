@@ -30,7 +30,7 @@ const closeModal = () => {
 
 async function fetchNotices(page) {
   try {
-    const response = await axios.get("http://localhost:8080/api/notice/list", {
+    const response = await axios.get("https://apiyeohaengdam.ttalkak.com/api/notice/list", {
       params: {
         page,
         size: 10,

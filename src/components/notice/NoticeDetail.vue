@@ -43,7 +43,7 @@ const deleteNotice = async () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`http://localhost:8080/api/notice/${props.item.noticeId}`, {
+          .delete(`https://apiyeohaengdam.ttalkak.com/api/notice/${props.item.noticeId}`, {
             headers: {
               Authorization: `Bearer ${sessionStorage.getItem("accessToken")}`,
             },

@@ -4,7 +4,7 @@ import axios from "axios";
 // station vue api axios instance
 function stationAxios() {
   const instance = axios.create({
-    baseURL: "http://localhost:8080",
+    baseURL: "https://apiyeohaengdam.ttalkak.com",
     headers: {
       "Content-Type": "application/json;charset=utf-8",
     },
@@ -15,7 +15,7 @@ function stationAxios() {
 // local vue api axios instance
 function localAxios() {
   const instance = axios.create({
-    baseURL: "http://localhost:8080",
+    baseURL: "https://apiyeohaengdam.ttalkak.com",
     // withCredentials: true,
     // headers: {
     //   "Content-Type": "application/json;charset=utf-8",

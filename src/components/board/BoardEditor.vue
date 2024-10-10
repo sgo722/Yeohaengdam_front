@@ -52,7 +52,7 @@ const postArticle = async () => {
   });
 
   try {
-    await axios.post('http://localhost:8080/api/articles', formData, {
+    await axios.post('https://apiyeohaengdam.ttalkak.com/api/articles', formData, {
       headers: {
         Authorization: `Bearer ${token}`,
         'Content-Type': 'multipart/form-data',
@@ -85,7 +85,7 @@ const saveArticle = async () => {
 async function fetchArticleData() {
   try {
     const response = await axios.get(
-      `http://localhost:8080/api/articles/${props.articleId}`
+      `https://apiyeohaengdam.ttalkak.com/api/articles/${props.articleId}`
     );
     title.value = response.data.title;
     description.value = response.data.content;
@@ -103,7 +103,7 @@ const updateArticle = async () => {
   // 이미지와 관련된 추가 로직 필요
   try {
     await axios.patch(
-      `http://localhost:8080/api/articles/${props.articleId}`,
+      `https://apiyeohaengdam.ttalkak.com/api/articles/${props.articleId}`,
       formData,
       {
         headers: {

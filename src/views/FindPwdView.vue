@@ -24,7 +24,7 @@ const emailCheck = async (emailInput) => {
   isLoading.value = true;
   try {
     const response = await axios.post(
-      `http://localhost:8080/api/auth/checkEmail`,
+      `https://apiyeohaengdam.ttalkak.com/api/auth/checkEmail`,
       {
         email: email.value,
         emailInput,
@@ -54,7 +54,7 @@ const emailCheck = async (emailInput) => {
 const resetPasswordFunction = async (email) => {
   try {
     const response = await axios.post(
-      `http://localhost:8080/api/users/reset/password`,
+      `https://apiyeohaengdam.ttalkak.com/api/users/reset/password`,
       {
         email: email.value,
       }
@@ -78,7 +78,7 @@ const resetPasswordFunction = async (email) => {
 const verifyEmailCode = async (code) => {
   try {
     const response = await axios.post(
-      `http://localhost:8080/api/auth/checkCode`,
+      `https://apiyeohaengdam.ttalkak.com/api/auth/checkCode`,
       {
         email: email.value,
         code: code,

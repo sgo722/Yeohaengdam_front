@@ -41,7 +41,7 @@ const placeholderText = computed(() => {
 const fetchComments = async () => {
   try {
     const response = await axios.get(
-      `http://localhost:8080/api/comment/${props.item.articleId}`
+      `https://apiyeohaengdam.ttalkak.com/api/comment/${props.item.articleId}`
     );
     localComments.value = response.data; // localComments를 사용
   } catch (error) {
@@ -64,7 +64,7 @@ const postComment = async () => {
 
   try {
     await axios.post(
-      'http://localhost:8080/api/comment',
+      'https://apiyeohaengdam.ttalkak.com/api/comment',
       {
         articleId: props.item.articleId,
         content: newComment.value,
@@ -118,7 +118,7 @@ const deleteArticle = async () => {
       if (result.isConfirmed) {
         axios
           .delete(
-            `http://localhost:8080/api/articles/${props.item.articleId}`,
+            `https://apiyeohaengdam.ttalkak.com/api/articles/${props.item.articleId}`,
             {
               headers: {
                 Authorization: `Bearer ${sessionStorage.getItem(

@@ -21,11 +21,11 @@ const isLoading = ref(false);
 const router = useRouter();
 
 const handleKakaoSignUp = async () => {
-  window.location.href = `http://localhost:8080/api/auth/oauth2/kakao`;
+  window.location.href = `https://apiyeohaengdam.ttalkak.com/api/auth/oauth2/kakao`;
 };
 
 const handleNaverSignUp = async () => {
-  window.location.href = `http://localhost:8080/api/auth/oauth2/naver`;
+  window.location.href = `https://apiyeohaengdam.ttalkak.com/api/auth/oauth2/naver`;
 };
 
 /** 회원 가입 */
@@ -96,7 +96,7 @@ const nicknameCheck = async () => {
   }
   try {
     const response = await axios.get(
-      `http://localhost:8080/api/users/check_nickname/${nickname.value}`
+      `https://apiyeohaengdam.ttalkak.com/api/users/check_nickname/${nickname.value}`
     );
     if (response.data.available) {
       const confirmUse = confirm(
@@ -130,7 +130,7 @@ const emailCheck = async (emailInput) => {
   isLoading.value = true;
   try {
     const response = await axios.post(
-      `http://localhost:8080/api/auth/checkEmail`,
+      `https://apiyeohaengdam.ttalkak.com/api/auth/checkEmail`,
       {
         email: email.value,
         emailInput,
@@ -156,7 +156,7 @@ const emailCheck = async (emailInput) => {
 const verifyEmailCode = async (code) => {
   try {
     const response = await axios.post(
-      `http://localhost:8080/api/auth/checkCode`,
+      `https://apiyeohaengdam.ttalkak.com/api/auth/checkCode`,
       {
         email: email.value,
         code: code,

@@ -27,7 +27,7 @@ const postArticle = async () => {
   };
 
   try {
-    await axios.post('http://localhost:8080/api/notice', articleData, {
+    await axios.post('https://apiyeohaengdam.ttalkak.com/api/notice', articleData, {
       headers: {
         Authorization: `Bearer ${token}`,
         'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ const saveArticle = async () => {
 async function fetchArticleData() {
   try {
     const response = await axios.get(
-      `http://localhost:8080/api/notice/${props.noticeId}`
+      `https://apiyeohaengdam.ttalkak.com/api/notice/${props.noticeId}`
     );
     console.log('data : ', response.data);
     title.value = response.data.title;
@@ -82,7 +82,7 @@ const updateArticle = async () => {
   };
   try {
     await axios.patch(
-      `http://localhost:8080/api/notice/${props.noticeId}`,
+      `https://apiyeohaengdam.ttalkak.com/api/notice/${props.noticeId}`,
       articleData,
       {
         headers: {

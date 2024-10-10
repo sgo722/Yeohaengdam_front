@@ -29,7 +29,7 @@ const sortBy = ref('updated_at');
 async function fetchBoardList(page, keyword = '', sortBy = 'updated_at') {
   try {
     const response = await axios.get(
-      `http://localhost:8080/api/articles/list`,
+      `https://apiyeohaengdam.ttalkak.com/api/articles/list`,
       {
         params: {
           page,
@@ -54,10 +54,10 @@ function updatePage(newPage) {
 async function showModal(board) {
   try {
     const articleResponse = await axios.get(
-      `http://localhost:8080/api/articles/${board.articleId}`
+      `https://apiyeohaengdam.ttalkak.com/api/articles/${board.articleId}`
     );
     const commentsResponse = await axios.get(
-      `http://localhost:8080/api/comment/${board.articleId}`
+      `https://apiyeohaengdam.ttalkak.com/api/comment/${board.articleId}`
     );
     selectedItem.value = articleResponse.data;
     comments.value = commentsResponse.data;

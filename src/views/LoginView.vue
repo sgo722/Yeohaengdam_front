@@ -36,11 +36,11 @@ const login = async () => {
 };
 
 const handleKakaoLogin = async () => {
-  window.location.href = `http://localhost:8080/api/auth/oauth2/kakao`;
+  window.location.href = `https://apiyeohaengdam.ttalkak.com/api/auth/oauth2/kakao`;
 };
 
 const handleNaverLogin = async () => {
-  window.location.href = `http://localhost:8080/api/auth/oauth2/naver`;
+  window.location.href = `https://apiyeohaengdam.ttalkak.com/api/auth/oauth2/naver`;
 };
 </script>
 
